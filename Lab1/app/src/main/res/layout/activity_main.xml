@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yu.lab1.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="中山大学学生信息系统"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/sysu"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+    <TextView
+        android:id="@+id/textSid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学号："
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@+id/editSid"
+        app:layout_constraintBottom_toBottomOf="@+id/editSid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+         />
+    <EditText
+        android:id="@+id/editSid"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:textColor="@color/colorAccent"
+        android:inputType="number"
+        android:hint="请输入学号"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textSid"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <TextView
+        android:id="@+id/textPid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码："
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@+id/editPid"
+        app:layout_constraintBottom_toBottomOf="@id/editPid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:layout_marginRight="20dp"
+        android:id="@+id/editPid"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textPid"
+        app:layout_constraintTop_toBottomOf="@+id/editSid"
+        />
+
+    <RadioGroup
+        android:id="@+id/rid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/editPid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1">
+
+        <RadioButton
+            android:id="@+id/rid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            app:layout_constraintRight_toRightOf="@+id/guideline"
+            android:checked="true"
+            android:text="学生"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"/>
+
+        <RadioButton
+            android:id="@+id/rid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            android:text="教职工"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/roundButton0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="登录"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rid"
+        app:layout_constraintRight_toRightOf="@+id/guideline"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/roundButton1"
+        android:background="@drawable/shape"
+        android:text="注册"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rid"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+</android.support.constraint.ConstraintLayout>
